@@ -36,27 +36,32 @@ body {
         cursor: pointer;
         opacity: .8;
     }
-        
-        ol {padding-left: 20px;}
-        
-        ol li {padding: 5px;color:#000;}
-        
-        ol li:nth-child(even){background: #dfdfdf;}
-        
-        .strike{text-decoration: line-through;}
-        
-        li:hover{
-            cursor: pointer;
-        }
-        
-        .delete {
-            display: none;
-        }
-        
-        li > crossOutButton {
-            background: none;
-            border: none;
-            float: right;
-            color: #025f70;
-            font-weight: 800;
-        }
+    
+    ol {padding-left: 20px;}
+    
+    ol li {padding: 5px;color:#000;}
+    
+    ol li:nth-child(even){background: #dfdfdf;}
+    
+    /* color background of the li while it is being reordered (i.e. dragged w/mouse) */
+    ol li:active{
+        background: lightcoral;
+    }
+    
+    .strike{text-decoration: line-through;}
+    
+    li:hover{
+        cursor: pointer;
+    }
+    
+    .delete {
+        display: none;
+    }
+    
+    li > crossOutButton {
+        background: none;
+        border: none;
+        float: right;
+        color: #025f70;
+        font-weight: 800;
+    }
