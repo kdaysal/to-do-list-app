@@ -1,9 +1,7 @@
 
 function newItem() {
 
-  //javascript
   //1. Adding a new item to the list of items: 
-
   //replaces document.createElement():
   let li = $('<li></li>');
   let inputValue = $('#input').val(); //replaces document.getElementById()
@@ -29,7 +27,7 @@ function newItem() {
 
   //3(ii). Add "delete" class (display: none) to hide/remove the li:
   function deleteListItem() {
-    console.log(`deleteListItem function called`);
+    console.log(`deleteListItem function called`); //for testing only - REMOVE LATER
     li.addClass('delete');
   }
 
