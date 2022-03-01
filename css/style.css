@@ -34,7 +34,8 @@ body {
     
     #button:hover{
         cursor: pointer;
-        opacity: .8;}
+        opacity: .8;
+    }
         
         ol {padding-left: 20px;}
         
