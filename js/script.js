@@ -4,12 +4,12 @@ function newItem() {
   //javascript
   //1. Adding a new item to the list of items: 
 
-  //replaces document.createElement()
+  //replaces document.createElement():
   let li = $('<li></li>');
   let inputValue = $('#input').val(); //replaces document.getElementById()
   li.append(inputValue);
 
-  //add validation for blank input
+  //add validation for blank input:
   if (inputValue === '') {
     alert("Don't leave this blank...please write something!");
   } else {
@@ -17,23 +17,25 @@ function newItem() {
   }
 
   //2. Cross out an item from the list if user double-clicks the li:
-  li.on("dblclick", function crossOutItem() {
-    li.toggleClass("strike");
+  li.on('dblclick', function crossOutItem() {
+    li.toggleClass('strike');
   });
 
   //3(i). Add a delete button in the form of an "X": 
   let deleteButton = $('<crossOutButton></crossOutButton>');
   deleteButton.append(document.createTextNode('X'));
   li.append(deleteButton);
+  deleteButton.on('click', deleteListItem);
 
-  crossOutButton.addEventListener("click", deleteListItem);
-  //3(ii). Adding CLASS DELETE (DISPLAY: NONE) from the css:
+  //3(ii). Add "delete" class (display: none) to hide/remove the li:
   function deleteListItem() {
-    li.classList.add("delete")
+    console.log(`deleteListItem function called`);
+    li.addClass('delete');
   }
-  //4. Reordering the items: 
-  $('#list').sortable();
 
+  //4. Enable reordering of the list via mouse click/drag: 
+  //good resource: https://jqueryui.com/sortable/#default
+  $('#list').sortable();
 }
 
 
