@@ -14,6 +14,9 @@ function newItem() {
     $('#list').append(li);
   }
 
+  //clear out input box after Add button is pressed
+  $('#input').val('');
+
   //2. Cross out an item from the list if user double-clicks the li:
   li.on('dblclick', function crossOutItem() {
     li.toggleClass('strike');
