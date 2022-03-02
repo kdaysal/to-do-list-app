@@ -14,8 +14,9 @@ function newItem() {
     $('#list').append(li);
   }
 
-  //clear out input box after Add button is pressed
+  //clear out input value after Add button is pressed and move focus back to input box
   $('#input').val('');
+  $('#input').focus();
 
   //2. Cross out an item from the list if user double-clicks the li:
   li.on('dblclick', function crossOutItem() {
